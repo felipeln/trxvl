@@ -11,9 +11,10 @@ export default {
       },
      
       backgroundImage: {
-        'search-icon': "url('/src/assets/search.svg')",
-        'calendar-icon': "url('/src/assets/calendar.svg')",
-        'person-icon': "url('/src/assets/person.svg')"
+        'search-icon': "url('/src/assets/header/search.svg')",
+        'calendar-icon': "url('/src/assets/header/calendar.svg')",
+        'person-icon': "url('/src/assets/header/person.svg')",
+        'header-gradient': 'background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);'
       }
 
     },
