@@ -19,7 +19,7 @@ const Menu = () => {
 
   const headerGradient = {
     background:
-      'linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 13.65%), linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url("/src/assets/header/gif-bg.gif") lightgray 50% / cover no-repeat',
+      'linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 13.65%), linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url("/src/assets/header/banner-bg.png") lightgray 50% / cover no-repeat',
   };
   return (
     <header
