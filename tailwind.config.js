@@ -8,13 +8,14 @@ export default {
     extend: {
       height: {
         '29': '29.406rem',
+        '921': '58.24525rem'
       },
      
       backgroundImage: {
-        'search-icon': "url('/src/assets/header/search.svg')",
-        'calendar-icon': "url('/src/assets/header/calendar.svg')",
-        'person-icon': "url('/src/assets/header/person.svg')",
-        'header-gradient': 'background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);'
+        'search-icon': "url('/src/assets/top-menu/search.svg')",
+        'calendar-icon': "url('/src/assets/top-menu/calendar.svg')",
+        'person-icon': "url('/src/assets/top-menu/person.svg')",
+        'top-menu-gradient': 'background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);'
       }
 
     },
