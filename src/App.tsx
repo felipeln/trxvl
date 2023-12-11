@@ -1,5 +1,4 @@
 import './App.css'
-import Menu from './components/top-menu/menu'
 import {Categories} from "./components/catogories/categories";
 import { Destinations } from './components/destinations/destinations';
 import { BottomMenu } from './components/bottom-menu/bottom-menu';
