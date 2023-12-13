@@ -12,7 +12,7 @@ const Destination = ({image,title}:Props) => {
 
   return(
     <li className="cursor-pointer shrink-0 relative" >
-      <div className="w-60 h-36 rounded-md bg-center object-cover bg" style={bgGradient}></div>
+      <div className="w-60 h-36 rounded-md bg-center object-cover bg lg:w-80 lg:h-52" style={bgGradient}></div>
       <h3 className="absolute bottom-0 font-bold text-lg text-white pl-4 pb-2">{title}</h3>
     </li>
   )
@@ -20,10 +20,10 @@ const Destination = ({image,title}:Props) => {
 
 const Destinations = () => {
  return (
-    <section className="p-6 mb-4">
-      <h2 className="font-bold text-2xl pb-6">Top Destinations</h2>
+    <section className="p-6 mb-4 lg:mt-[-220px] lg:px-120 lg:relative">
+      <h2 className="font-bold text-2xl pb-6 lg:text-white lg:text-4xl">Top Vacations Destinations</h2>
 
-      <ul className="flex gap-4 overflow-x-auto pb-4">
+      <ul className="flex gap-4 overflow-x-auto pb-4 lg:justify-between">
         <Destination title="Rio, Brazil." image="/src/assets/destinations/brazil-rio.jpg" />
         <Destination title="Paris, France." image="/src/assets/destinations/france-paris.png" />
         <Destination title="Tokyo, Japan" image="/src/assets/destinations/japão-tokyo.jpg" />
