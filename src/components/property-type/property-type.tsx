@@ -12,7 +12,7 @@ const Type = ({image,title}:Props) => {
 
   return(
     <li className="cursor-pointer shrink-0 relative" >
-      <div className="w-60 h-36 rounded-md bg-center object-cover bg" style={bgGradient}></div>
+      <div className="w-60 h-36 rounded-md bg-center object-cover bg lg:w-80 lg:h-52" style={bgGradient}></div>
       <h3 className="absolute bottom-0 font-bold text-lg text-white pl-4 pb-2">{title}</h3>
     </li>
   )

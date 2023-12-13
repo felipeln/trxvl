@@ -8,7 +8,7 @@ type Props = {
 
 
 
-const BtnSearchMenu = ({ children, customStyle }: Props) => {
+export const BtnSearchMenu = ({ children, customStyle }: Props) => {
   return (
     <li className={`w-full px-4 py-1 backdrop-blur-lg rounded-3xl flex gap-2 ${customStyle} lg:bg-transparent lg:px-0 lg:min-w-max`}>
         {children}
@@ -25,7 +25,7 @@ const Header = () => {
   };
   return (
     <header
-      className="h-29 px-6 pt-4 bg-center bg-cover relative
+      className="h-464 px-6 pt-4 bg-center bg-cover relative
       lg:h-921
       lg:px-10
       "
@@ -41,7 +41,7 @@ const Header = () => {
 };
 
 
-const Menu = () => {
+export const Menu = () => {
 
   const handlerClick = () => {
     document.querySelector("#ul-menu")?.classList.toggle("invisible");
@@ -62,7 +62,7 @@ const Menu = () => {
         </div>
         
         <ul id="ul-menu"
-          className=" fixed z-10 mt-4 left-6 right-6 h-96 flex-col flex justify-evenly items-center gap-6  bg-slate-400/40 backdrop-blur-lg  rounded-3xl invisible
+          className=" fixed z-10 mt-8 left-6 right-6 h-96 flex-col flex justify-evenly items-center gap-6  bg-slate-400/40 backdrop-blur-lg  rounded-3xl invisible
 
           sm:relative
           sm:visible
@@ -122,7 +122,7 @@ const Menu = () => {
   )
 }
 
-const SearchMenu = () => {
+export const SearchMenu = () => {
   return(
     <div className="mt-12 lg:px-20">
       <h1 className="w-72 text-4xl text-white text-left sm:font-bold sm:text-5xl sm:w-96 lg:text-8xl lg:mt-20 lg:w-840">
