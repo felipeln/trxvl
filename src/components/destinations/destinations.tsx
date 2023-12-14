@@ -1,3 +1,6 @@
+import { useRef,  MutableRefObject } from "react";
+import { useDraggable } from "react-use-draggable-scroll";
+
 type Props = {
   title: string,
   image: string
@@ -19,11 +22,20 @@ const Destination = ({image,title}:Props) => {
 }
 
 const Destinations = () => {
+
+  const ref = useRef<HTMLUListElement>(null) as MutableRefObject<HTMLUListElement>;
+  const { events } = useDraggable(ref);
+
+
  return (
-    <section className="p-6 mb-4 lg:mt-[-220px] lg:px-120 lg:relative">
+    <section className="p-6 mb-4 lg:mt-[-220px] lg:px-120 lg:relative" 
+    >
       <h2 className="font-bold text-2xl pb-6 lg:text-white lg:text-4xl">Top Vacations Destinations</h2>
 
-      <ul className="flex gap-4 overflow-x-auto pb-4 lg:justify-between">
+      <ul className="flex gap-4 overflow-x-auto pb-4 lg:justify-between destination-list-wrapper"
+        {...events}
+        ref={ref}
+      >
         <Destination title="Rio, Brazil." image="/src/assets/destinations/brazil-rio.jpg" />
         <Destination title="Paris, France." image="/src/assets/destinations/france-paris.png" />
         <Destination title="Tokyo, Japan" image="/src/assets/destinations/japão-tokyo.jpg" />

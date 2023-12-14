@@ -1,3 +1,6 @@
+import { useRef,  MutableRefObject } from "react";
+import { useDraggable } from "react-use-draggable-scroll";
+
 type Props = {
   title: string,
   image: string
@@ -19,11 +22,18 @@ const Type = ({image,title}:Props) => {
 }
 
 const PropertyTypes = () => {
+  const ref = useRef<HTMLUListElement>(null) as MutableRefObject<HTMLUListElement>;
+  const { events } = useDraggable(ref);
+
+
  return (
     <section className="p-6 mb-32 lg:px-120 lg:mb-0">
       <h2 className="font-bold text-2xl pb-6">Browse by property type</h2>
 
-      <ul className="flex gap-4 overflow-x-auto pb-4">
+      <ul className="flex gap-4 overflow-x-auto pb-4" 
+        {...events}
+        ref={ref}
+      >
         <Type title="Hotel" image="/src/assets/property-type/hotels.png" />
         <Type title="Apartments" image="/src/assets/property-type/apartaments.png" />
         <Type title="Resorts " image="/src/assets/property-type/resorts.png" />

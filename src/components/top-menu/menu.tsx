@@ -6,9 +6,7 @@ type Props = {
 };
 
 
-
-
-export const BtnSearchMenu = ({ children, customStyle }: Props) => {
+const BtnSearchMenu = ({ children, customStyle }: Props) => {
   return (
     <li className={`w-full px-4 py-1 backdrop-blur-lg rounded-3xl flex gap-2 ${customStyle} lg:bg-transparent lg:px-0 lg:min-w-max`}>
         {children}
@@ -41,7 +39,7 @@ const Header = () => {
 };
 
 
-export const Menu = () => {
+const Menu = () => {
 
   const handlerClick = () => {
     document.querySelector("#ul-menu")?.classList.toggle("invisible");
@@ -122,7 +120,7 @@ export const Menu = () => {
   )
 }
 
-export const SearchMenu = () => {
+ const SearchMenu = () => {
   return(
     <div className="mt-12 lg:px-20">
       <h1 className="w-72 text-4xl text-white text-left sm:font-bold sm:text-5xl sm:w-96 lg:text-8xl lg:mt-20 lg:w-840">
@@ -199,4 +197,4 @@ export const SearchMenu = () => {
 
   )
 }
-export default Header;
+export  {Header, Menu, SearchMenu, BtnSearchMenu};

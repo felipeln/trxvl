@@ -113,4 +113,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export  {Footer,Link,Links,Social,Socials}

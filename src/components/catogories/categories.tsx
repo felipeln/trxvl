@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef,  MutableRefObject } from "react";
+import { useDraggable } from "react-use-draggable-scroll";
 
 type Props = {
   title: string,
@@ -38,11 +39,19 @@ const Category = ({title,image}: Props) => {
 }
 
 const Categories = () => {
+
+  const ref = useRef<HTMLUListElement>(null) as MutableRefObject<HTMLUListElement>;
+  const { events } = useDraggable(ref);
+
+
   return(
       <section className="p-6 lg:absolute  top-[510px]  z-10  lg:p-0 lg:px-120 lg:w-full ">
         <h2 className="font-bold text-2xl pb-6 lg:text-white lg:text-4xl">Top Categories</h2>
 
-        <ul className="flex gap-4 overflow-x-auto pb-4 lg:justify-between ">
+        <ul className="flex gap-4 overflow-x-auto pb-4 lg:justify-between" 
+          {...events}
+          ref={ref}
+        >
           <Category title="Beaches" image="beaches.png" />
           <Category title="Deserts" image="deserts.png" />
           <Category title="Mountains" image="mountains.png" />
