@@ -8,7 +8,7 @@ type Props = {
 
 const BtnSearchMenu = ({ children, customStyle }: Props) => {
   return (
-    <li className={`w-full px-4 py-1 backdrop-blur-lg rounded-3xl flex gap-2 ${customStyle} lg:bg-transparent lg:px-0 lg:min-w-max`}>
+    <li className={`w-full px-4 py-1 backdrop-blur-lg rounded-3xl flex gap-2 ${customStyle}`}>
         {children}
     </li>
   );
@@ -139,7 +139,7 @@ const Menu = () => {
       lg:h-16
     ">
       
-      <BtnSearchMenu customStyle="bg-slate-400/40 justify-center items-center lg:w-418 ">
+      <BtnSearchMenu customStyle="bg-slate-400/40 justify-center items-center lg:w-418 lg:bg-transparent lg:px-0 lg:min-w-max">
         <span className="w-5 h-5 bg-search-icon bg-no-repeat cursor-pointer">
         </span>
         <input
@@ -153,7 +153,7 @@ const Menu = () => {
 
 
         <div className="w-full date-wrapper flex justify-center gap-4 bg-slate-400/40 backdrop-blur-lg rounded-3xl lg:w-max lg:bg-transparent">
-          <BtnSearchMenu customStyle="w-max lg:w-162">
+          <BtnSearchMenu customStyle="w-max lg:w-162 lg:bg-transparent lg:px-0 lg:min-w-max">
                     <label
                       htmlFor="initial-date"
                       className="cursor-pointer bg-calendar-icon bg-no-repeat pl-8 text-white"
@@ -166,7 +166,7 @@ const Menu = () => {
                     />
           </BtnSearchMenu>
 
-          <BtnSearchMenu customStyle="w-max lg:w-162">
+          <BtnSearchMenu customStyle="w-max lg:w-162 lg:bg-transparent lg:px-0 lg:min-w-max">
               <label
                 htmlFor="final-date"
                 className="cursor-pointer bg-calendar-icon bg-no-repeat pl-8 text-white"
@@ -177,12 +177,11 @@ const Menu = () => {
                 id="final-date"
                 className="hidden"
               />
-              
           </BtnSearchMenu>
         </div>
       
 
-      <BtnSearchMenu customStyle="bg-slate-400/40 justify-center lg:w-162">
+      <BtnSearchMenu customStyle="bg-slate-400/40 justify-center lg:w-162 lg:bg-transparent lg:px-0 lg:min-w-max">
         <div className="w-5 h-5 cursor-pointer person-icon bg-person-icon"></div>
         <button className="text-white">1 room, 2 adults</button>
       </BtnSearchMenu>

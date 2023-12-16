@@ -27,7 +27,7 @@ const PropertyTypes = () => {
 
 
  return (
-    <section className="p-6 mb-32 lg:px-120 lg:mb-0">
+    <section className="p-6 mb-20 lg:px-120 lg:mb-0">
       <h2 className="font-bold text-2xl pb-6">Browse by property type</h2>
 
       <ul className="flex gap-4 overflow-x-auto pb-4" 

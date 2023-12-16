@@ -8,13 +8,16 @@ export default {
     extend: {
       height: {
         '464': '29.406rem',
-        '921': '58.24525rem'
+        '601': '37.621rem',
+        '921': '58.24525rem',
+        '582': '36.375rem'
       },
       width: {
         '162': '10.125rem',
         '512': '32rem',
         '840': '52rem',
-        '418': '26.125rem'
+        '418': '26.125rem',
+        '300': '20rem'
       },
       padding: {'120': '7.5rem'},
       
@@ -22,7 +25,9 @@ export default {
         'search-icon': "url('/src/assets/top-menu/search.svg')",
         'calendar-icon': "url('/src/assets/top-menu/calendar.svg')",
         'person-icon': "url('/src/assets/top-menu/person.svg')",
-        'top-menu-gradient': 'background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);'
+        'top-menu-gradient': 'background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);',
+        'phone-mockup': "url('/src/assets/travel-app/phone-mockup.png')",
+        'travel-expert': "url('/src/assets/trip.png')"
       }
 
     },
