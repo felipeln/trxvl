@@ -11,7 +11,7 @@ const Category = ({title,image, children}: Props) => {
   
   const [imageUrl, setImageUrl] = useState('');
 
-  const baseUrl = '/src/assets/categories';
+  const baseUrl = 'src/assets/categories';
   
   useEffect(() => {
     // Handler to call on window resize

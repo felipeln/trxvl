@@ -40,7 +40,7 @@ const TravelApp = () => {
             <h2 className="text-5xl text-white">Your all-in-one travel app.</h2>
             <p className="text-2xl text-white">Book flights, hotels, trains & rental cars anywhere in the world in just seconds. Get real-time flight updates, travel info, exclusive deals, and 30% more Trip Coins only on the app!</p>
 
-            <div className="download-app flex flex-row justify-between">
+            <div className="download-app flex flex-row justify-between ">
                 <div className="options-wrapper">
 
                   <div className="options-email-number flex w-52">

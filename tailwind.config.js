@@ -14,10 +14,12 @@ export default {
       },
       width: {
         '162': '10.125rem',
-        '512': '32rem',
-        '840': '52rem',
+        '300': '20rem',
         '418': '26.125rem',
-        '300': '20rem'
+        '512': '32rem',
+        '726': '45.388rem',
+        '840': '52rem',
+
       },
       padding: {'120': '7.5rem'},
       
@@ -28,6 +30,9 @@ export default {
         'top-menu-gradient': 'background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);',
         'phone-mockup': "url('/src/assets/travel-app/phone-mockup.png')",
         'travel-expert': "url('/src/assets/trip.png')"
+      },
+      boxShadow: {
+        'offer': '0px 4.428px 17.712px 0px rgba(158, 158, 158, 0.25)'
       }
 
     },

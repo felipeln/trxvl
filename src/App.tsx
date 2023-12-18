@@ -8,7 +8,7 @@ import {Footer} from './components/footer/footer';
 import { TravelApp } from './components/travel-app/travel-app';
 import { TravelExpert } from './components/travel-expert/travel-expert';
 import { TravelerCommunity } from './components/traveler-community/traveler-community';
-
+import { Offers } from './components/offers/offers';
 
 function App() {
 
@@ -17,6 +17,7 @@ function App() {
         <Header />
         <Categories />
         <Destinations />
+        <Offers/>
         <PropertyTypes  />
         <BottomMenu />
         <TravelExpert/>
