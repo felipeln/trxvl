@@ -21,7 +21,10 @@ export default {
         '840': '52rem',
 
       },
-      padding: {'120': '7.5rem'},
+      padding: {
+        '120': '7.5rem', 
+      },
+
       
       backgroundImage: {
         'search-icon': "url('/src/assets/top-menu/search.svg')",

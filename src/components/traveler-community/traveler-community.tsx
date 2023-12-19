@@ -23,7 +23,7 @@ const Community = ({title,image}: Props) => {
   
 
   return(
-    <li className="cursor-pointer shrink-0 flex flex-col  bg-white lg:bg-transparent ">
+    <li className="cursor-pointer shrink-0 flex flex-col  bg-white lg:bg-transparent last:pr-4">
       <div className="w-80 h-52 rounded-md bg-center object-cover" style={bgGradient}></div>
       <h3 className="text-black text-2xl mt-2">{title}</h3>
       <p className="text-base mt text-black opacity-50">Travel community <br /> 155,073 travelers</p>
@@ -58,7 +58,7 @@ const TravelerCommunity = () => {
   const { events } = useDraggable(ref);
 
   return(
-    <section id="travel-community" className="px-120 mb-16">
+    <section id="travel-community" className="pl-120 mb-16">
      <h2 className="font-bold pb-6 text-3xl">Connect with other travelers in our community</h2>
 
      <ul className="flex gap-4 overflow-x-auto pb-4" 

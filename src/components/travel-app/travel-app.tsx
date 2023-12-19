@@ -2,6 +2,14 @@ import { useEffect, useState } from "react"
 import { BtnSearchMenu } from "../top-menu/menu";
 const TravelApp = () => {
 
+  const bgStyle = {
+    backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url('/src/assets/travel-app/mountain-blue.png')`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: 'lightgray',
+  }
+
   useEffect(() => {
     // Handler to call on window resize
     function handleResize() {
@@ -25,14 +33,14 @@ const TravelApp = () => {
   
   type Option = 'option-number' | 'option-email';
 
-  const [selectedOption, setSelectedOption] = useState<Option | null>('option-number');
+  const [selectedOption, setSelectedOption] = useState<Option>('option-number');
 
   const handleOptionChange = (option: Option) => {
-    setSelectedOption((prevSelected) => (prevSelected === option ? null : option));
+    setSelectedOption((prevSelected) => (prevSelected === option ? prevSelected : option));
   };
 
   return (
-    <section id="travel-app" className="px-120 pt-20 w-full bg-blue-600 h-601 flex gap-x-[103px]  overflow-y-hidden">
+    <section id="travel-app" className="px-120 pt-20 w-ful h-601 flex gap-x-[103px]  overflow-y-hidden" style={bgStyle}>
         <div className="phone-mockup flex-shrink-0  w-300  h-582 bg-phone-mockup bg-cover bg-no-repeat bg-center ">
             <img src="/src/assets/travel-app/phone-bg.png" className="p-4 w-full h-full" alt="" />
         </div>
@@ -43,34 +51,28 @@ const TravelApp = () => {
             <div className="download-app flex flex-row justify-between ">
                 <div className="options-wrapper">
 
-                  <div className="options-email-number flex w-52">
+                  <ul className="options-email-number flex w-52">
                     <BtnSearchMenu customStyle=" lg:bg-transparent lg:px-0 ">
-                          <label
-                            htmlFor="option-number"
+                          <button
                             className={`bg-slate-400/40 backdrop-blur-lg rounded-3xl flex px-4 py-2 text-white text-lg cursor-pointer ${
                               selectedOption === 'option-number' ? '' : 'bg-transparent'
                             } `}
                             onClick={() => handleOptionChange('option-number')}
                           >
                             Number
-                          </label>
-                          <input type="radio" name="options" id="option-number" className="hidden" />
+                          </button>
                     </BtnSearchMenu>
                     <BtnSearchMenu customStyle=" lg:bg-transparent lg:px-0">
-                          
-                          <label
-                            htmlFor="option-email"
+                          <button
                             className={`bg-slate-400/40 backdrop-blur-lg rounded-3xl flex px-4 py-2 text-white text-lg cursor-pointer ${
                               selectedOption === 'option-email' ? '' : 'bg-transparent'
                             }`}
                             onClick={() => handleOptionChange('option-email')}
                           >
                             Email
-                          </label>
-                          <input type="radio" name="options" id="option-email" className="hidden" />
+                          </button>
                     </BtnSearchMenu>
-                  
-                  </div>
+                  </ul>
                   
                   <div className="receiveLink w-512 mt-4">
                       

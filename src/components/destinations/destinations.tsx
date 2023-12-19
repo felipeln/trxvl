@@ -14,7 +14,7 @@ const Destination = ({image,title}:Props) => {
   }
 
   return(
-    <li className="cursor-pointer shrink-0 relative" >
+    <li className="cursor-pointer shrink-0 relative last:pr-4" >
       <div className="w-60 h-36 rounded-md bg-center object-cover bg lg:w-80 lg:h-52" style={bgGradient}></div>
       <h3 className="absolute bottom-0 font-bold text-lg text-white pl-4 pb-2">{title}</h3>
     </li>
@@ -28,7 +28,7 @@ const Destinations = () => {
 
 
  return (
-    <section className="p-6 mb-4 lg:mt-[-220px] lg:px-120 lg:relative" 
+    <section className="py-6 mb-4 lg:mt-[-220px] lg:pl-120 lg:relative" 
     >
       <h2 className="font-bold text-2xl pb-6 lg:text-white lg:text-4xl">Top Vacations Destinations</h2>
 

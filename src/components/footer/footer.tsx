@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from "react"
+import { ReactNode, useEffect} from "react"
 
 type Props = {
   text?: string,
@@ -25,16 +25,20 @@ const Links = ({children}: Props) => {
 
 
 const Social = ({image}: Props) => {
+  const baseUrl = '/src/assets/footer/'
+  const imageUrl = `${baseUrl}${image}`
+
+
   return (
-    <li>
-      <img src={image} className="w-10 h-10" alt="" />
+    <li className="w-auto h-auto">
+      <img src={imageUrl} alt="" />
     </li>
   )
 }
 
 const Socials = ({children}: Props) =>{
   return (
-    <ul className="flex flex-row items-center gap-5">
+    <ul className="flex justify-between flex-row items-center w-[173px]">
       {children}
     </ul>
   )
@@ -100,13 +104,28 @@ const Footer = () => {
           </div>
       </nav>
 
-      <div className="flex  justify-end mt-10">
+      <div className="flex justify-between ml-[188px] mt-10">
+        <div className="flex flex-row gap-5 items-center">
+          <p className="text-gray-500">© 2023 </p>
+
+          <a className="text-white" href="https://www.figma.com/@abhimank" target="_blank">
+            <button>Design by </button> Himank
+          </a>
+
+          <a className="py-1 text-white" href="https://github.com/felipeln" target="_blank">
+            <button>Code by</button> Felipeln
+          </a>
+          
+          
+        </div>
         <Socials>
-          <Social image="https://picsum.photos/40/40"/>
-          <Social image="https://picsum.photos/40/40"/>
-          <Social image="https://picsum.photos/40/40"/>
-          <Social image="https://picsum.photos/40/40"/>
+          <Social image="face.svg" />
+          <Social image="insta.svg" />
+          <Social image="tt.svg" />
+          <Social image="ytb.svg" />
         </Socials>
+
+        
       </div>
 
     </footer>
