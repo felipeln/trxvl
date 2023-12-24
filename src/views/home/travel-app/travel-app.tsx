@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { BtnSearchMenu } from "../top-menu/menu";
+import { BtnSearchMenu } from "../../../components/top-menu/menu";
 const TravelApp = () => {
 
   const bgStyle = {

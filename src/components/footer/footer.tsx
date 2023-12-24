@@ -27,11 +27,13 @@ const Links = ({children}: Props) => {
 const Social = ({image}: Props) => {
   const baseUrl = '/src/assets/footer/'
   const imageUrl = `${baseUrl}${image}`
-
+  const linkLabel = image?.replace(/\.svg/, '')
 
   return (
     <li className="w-auto h-auto">
-      <img src={imageUrl} alt="" />
+      <a href="#" aria-label={`Link to ${linkLabel} website`}>
+        <img src={imageUrl} alt="" />
+      </a>
     </li>
   )
 }

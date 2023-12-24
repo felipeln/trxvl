@@ -17,7 +17,7 @@ const BottomMenu = () => {
   return (
     <nav className="fixed w-full bottom-0 bg-white border-t-2 border-gray-400
     lg:hidden
-    ">
+     z-50">
       <ul className="flex px-6 py-3 justify-between">
         <MenuItem title="Home" image="/src/assets/bottom-menu/home.svg" />
         <MenuItem title="Packages" image="/src/assets/bottom-menu/packages.svg" />
