@@ -1,5 +1,5 @@
-import { Carousel, CarouselItem } from "../../../components/carousel/carousel";
-
+import { Carousel} from "../../../components/carousel/carousel";
+import { CarouselItemBasic  } from "../../../components/carousel/carousel-item-basic";
 type Props = {
   title: string,
   image: string
@@ -24,7 +24,7 @@ const Property = ({image,title}:Props) => {
   }
 
   return(
-    <CarouselItem imageTitle={title} styles={Style}  />
+    <CarouselItemBasic  imageTitle={title} styles={Style}  />
   )
 }
 
@@ -33,7 +33,7 @@ const PropertyTypes = () => {
 
   const ContainerStyle = {
     title: 'font-bold text-3xl pb-6',
-    container: 'pl-6 mb-5 lg:pl-120 lg:pr-6 lg:mb-0 ',
+    container: 'pl-6 mb-20 lg:pl-120 lg:pr-6 lg:mb-20 ',
     ul: 'flex gap-4 overflow-x-auto pb-4'
   }
 

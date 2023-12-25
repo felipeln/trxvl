@@ -1,6 +1,5 @@
-import { Carousel, CarouselItem } from "../../../components/carousel/carousel";
-
-
+import { Carousel } from "../../../components/carousel/carousel";
+import { CarouselItemOffers   } from "../../../components/carousel/carousel-item-offers";
 type Props = {
   title: string,
   subtitle: string,
@@ -36,7 +35,7 @@ const Offer = ({title, subtitle, image, desc, btnText}:Props) => {
 
   return(
     <>
-      <CarouselItem imageTitle={title} subtitle={subtitle} desc={{text1: desc}} button={btnText} styles={Style}  />
+      <CarouselItemOffers imageTitle={title} subtitle={subtitle} desc={{text1: desc}} button={btnText} styles={Style}  />
     </>
   )
 
@@ -47,7 +46,7 @@ const Offers = () => {
   
   const ContainerStyle = {
     title: 'font-bold text-3xl pb-6',
-    container: 'pl-6 lg:pl-120 my-6',
+    container: 'pl-6 lg:pl-120 mb-20',
     ul: 'flex gap-4 lg:gap-6 overflow-x-auto pb-4'
   }
 

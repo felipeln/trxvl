@@ -1,4 +1,4 @@
-import { ReactNode, useEffect} from "react"
+import { ReactNode} from "react"
 
 type Props = {
   text?: string,
@@ -48,37 +48,15 @@ const Socials = ({children}: Props) =>{
 
 const Footer = () => {
 
-  useEffect(() => {
-    // Handler to call on window resize
-    function handleResize() {
-      const footer = document.querySelector('footer')
-       if(window.innerWidth > 1024) {
-        footer?.classList.add('visible')
-        footer?.classList.remove('hidden')
-      }if (window.innerWidth < 1024) {
-        footer?.classList.remove('visible')
-        footer?.classList.add('hidden')
-      }
-    }
-    
-    // Add event listener
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    
-    // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize);
-  }, );
-
-
   return (
-    <footer className="bg-[#141414] w-full h-80 px-120 py-12">
+    <footer className="bg-[#141414] w-full h-auto lg:h-80 px-6 pb-40 lg:px-120 py-12">
 
-      <nav className="flex h-469 w-full justify-between gap-32">
+      <nav className=" flex flex-col w-full h-auto lg:flex-row lg:h-469 lg:justify-between gap-32">
           <h1 className="logo text-2xl text-white sm:font-bold">
             Trxvl.
           </h1>
 
-          <div className="links-Wrapper flex w-full justify-between">
+          <div className="links-Wrapper flex-wrap gap-14 lg:gap-0 lg:flex-row flex w-full justify-between">
             <Links>
                 <Link text="testando um dois"/>
                 <Link text="teste"/>
@@ -106,8 +84,8 @@ const Footer = () => {
           </div>
       </nav>
 
-      <div className="flex justify-between ml-[188px] mt-10">
-        <div className="flex flex-row gap-5 items-center">
+      <div className="flex flex-wrap gap-4 justify-between lg:ml-[188px] mt-10">
+        <div className="flex flex-wrap lg:flex-row gap-5 items-center">
           <p className="text-gray-500">© 2023 </p>
 
           <a className="text-white" href="https://www.figma.com/@abhimank" target="_blank">

@@ -1,4 +1,5 @@
-import { Carousel, CarouselItem } from "../../../components/carousel/carousel";
+import { Carousel } from "../../../components/carousel/carousel";
+import { CarouselItemBasic} from "../../../components/carousel/carousel-item-basic";
 type Props = {
   title: string,
   image: string,
@@ -33,7 +34,7 @@ const Community = ({title,image, desc}: Props) => {
   }
 
   return(
-    <CarouselItem imageTitle={title} desc={desc} styles={Style}  />
+    <CarouselItemBasic imageTitle={title} desc={desc} styles={Style}  />
   )
 }
 
@@ -42,7 +43,7 @@ const TravelerCommunity = () => {
 
   const ContainerStyle = {
       title: 'font-bold pb-6 text-3xl',
-      container: 'pl-6 mb-20 lg:pl-120 lg:pr-6 lg:mb-0',
+      container: 'pl-6 mb-20 lg:pl-120 lg:pr-6 lg:mb-20',
       ul: 'flex gap-4 overflow-x-auto pb-4 '
     }
   

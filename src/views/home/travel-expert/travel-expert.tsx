@@ -30,7 +30,7 @@ const TravelExpert = () =>{
 
   return(
 
-    <section id="travel-expert" className="px-120 py-16">
+    <section id="travel-expert" className="px-120 py-16 mb-20">
      <div className="flex flex-col gap-4 justify-start h-[437px] rounded-3xl px-20 py-24" style={bgStyle}>
       <h2 className="text-white text-6xl font-bold w-9/12">Plan your trip with travel expert</h2>
       <p className="text-white text-3xl">Our professional advisors can craft your perfect itinerary</p>

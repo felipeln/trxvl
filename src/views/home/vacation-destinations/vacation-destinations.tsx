@@ -1,5 +1,5 @@
-import { Carousel, CarouselItem } from "../../../components/carousel/carousel";
-
+import { Carousel} from "../../../components/carousel/carousel";
+import { CarouselItemBasic } from "../../../components/carousel/carousel-item-basic";
 
 type Props = {
   title: string,
@@ -26,7 +26,7 @@ const Destiny = ({image,title}:Props) => {
   }
 
   return(
-    <CarouselItem imageTitle={title} styles={Style}  />
+    <CarouselItemBasic imageTitle={title} styles={Style}  />
   )
 }
 
@@ -34,7 +34,7 @@ const Destinations = () => {
 
   const ContainerStyle = {
     title: 'font-bold text-2xl pb-6 lg:text-white lg:text-4xl',
-    container: 'pl-6 mb-4 lg:mt-[-220px] lg:pl-120 lg:relative',
+    container: 'pl-6 mb-20 lg:mt-[-220px] lg:pl-120 lg:relative',
     ul: 'flex gap-4 overflow-x-auto pb-4 lg:justify-between destination-list-wrapper'
   }
 

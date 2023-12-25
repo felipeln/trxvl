@@ -1,6 +1,6 @@
 import { useEffect, useState, ReactNode } from "react";
-import { Carousel, CarouselItem } from "../carousel/carousel";
-
+import { Carousel} from "../carousel/carousel";
+import { CarouselItemBasic } from "../carousel/carousel-item-basic";
 type Props = {
   title: string,
   image: string,
@@ -49,7 +49,7 @@ const Category = ({title,image}: Props) => {
 
 
   return(
-    <CarouselItem imageTitle={title} styles={Style}/>
+    <CarouselItemBasic imageTitle={title} styles={Style}/>
   )
 }
 
