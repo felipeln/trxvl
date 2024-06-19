@@ -8,7 +8,7 @@ type CarouselItem = {
     text2?: string;
   };
   button?: string;
-  
+  link?: string;
   styles: {
     li?: string;
     image: {
@@ -21,19 +21,46 @@ type CarouselItem = {
   };
 };
 
-const CarouselItemBasic: React.FC<CarouselItem> = ({ imageTitle, desc, button, styles }) => {
+const CarouselItemBasic: React.FC<CarouselItem> = ({ imageTitle, desc, button, styles, link }) => {
+
   return (
     <li className={styles.li}>
-      <picture>
-        <div style={styles.image.bgStyle} className={styles.image.classes}></div>
-      </picture>
-      {imageTitle && <h3 className={styles.imageTitle}>{imageTitle}</h3>}
-      {desc && (
-        <p className={styles.desc}>
-          {desc.text1} <br /> {desc.text2}
-        </p>
-      )}
-      {button && <button className={styles.button}>{button}</button>}
+    
+    {link ? (
+      
+      <a href={link} className={styles.li}>
+        <>
+          <picture>
+              <div style={styles.image.bgStyle} className={styles.image.classes}></div>
+          </picture>
+          {imageTitle && <h3 className={styles.imageTitle}>   {imageTitle}</h3>
+          }
+          {desc && (
+            <p className={styles.desc}>
+              {desc.text1} <br /> {desc.text2}
+            </p>
+          )}
+          {button && <button className={styles.button}>{button}</button>}
+        </>
+      </a>
+    ) : (
+      <>
+        <picture>
+            <div style={styles.image.bgStyle} className={styles.image.classes}></div>
+        </picture>
+        {imageTitle && <h3 className={styles.imageTitle}>   {imageTitle}</h3>
+        }
+        {desc && (
+          <p className={styles.desc}>
+            {desc.text1} <br /> {desc.text2}
+          </p>
+        )}
+        {button && <button className={styles.button}>{button}</button>}
+      </>
+    )}
+      
+
+      
     </li>
   );
 };

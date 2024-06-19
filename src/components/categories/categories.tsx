@@ -4,13 +4,14 @@ import { CarouselItemBasic } from "../carousel/carousel-item-basic";
 type Props = {
   title: string,
   image: string,
+  link?: string,
   children?: ReactNode
 }
 
 const Category = ({title,image}: Props) => {
   const [imageUrl, setImageUrl] = useState('');
 
-  const baseUrl = 'src/assets/categories';
+  const baseUrl = 'src/assets/top-categories';
   
   useEffect(() => {
     // Handler to call on window resize
@@ -47,9 +48,11 @@ const Category = ({title,image}: Props) => {
     imageTitle: 'text-black text-sm  opacity-60 lg:text-white',
   }
 
-
+  const baseLink = '/categories/'
+  const regexLink = title.replace(/\s+/g, '-').toLowerCase();
+  const Link = `${baseLink}${regexLink}`
   return(
-    <CarouselItemBasic imageTitle={title} styles={Style}/>
+    <CarouselItemBasic link={Link} imageTitle={title} styles={Style}/>
   )
 }
 
@@ -63,16 +66,16 @@ const Categories = () => {
 
   return(
     <Carousel id="Categories-container" title="Top categories" styles={ContainerStyle}>
-      <Category title="Beaches" image="beaches.png" />
-      <Category title="Deserts" image="deserts.png" />
-      <Category title="Mountains" image="mountains.png" />
-      <Category title="Iconic Cities" image="iconic-cities.png" />
-      <Category title="Houseboats" image="house-boats.png" />
-      <Category title="Countryside" image="country-side.png" />
-      <Category title="Camping" image="camping.png" />
-      <Category title="Castles" image="castles.png" />
-      <Category title="Skiing" image="skiing.png" />
-      <Category title="Tropical" image="tropical.png" />
+      <Category  title="Beaches" image="beaches.png" />
+      <Category  title="Deserts" image="deserts.png" />
+      <Category  title="Mountains" image="mountains.png" />
+      <Category  title="Iconic Cities" image="iconic-cities.png" />
+      <Category  title="Houseboats" image="house-boats.png" />
+      <Category  title="Countryside" image="country-side.png" />
+      <Category  title="Camping" image="camping.png" />
+      <Category  title="Castles" image="castles.png" />
+      <Category  title="Skiing" image="skiing.png" />
+      <Category  title="Tropical" image="tropical.png" />
     </Carousel>
   )
 }

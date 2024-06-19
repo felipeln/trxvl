@@ -20,7 +20,6 @@ const Home = () => {
         <BottomMenu />
         <TravelExpert/>
         <TravelerCommunity/>
-        
         <TravelApp/>
       <Footer/>
     </>

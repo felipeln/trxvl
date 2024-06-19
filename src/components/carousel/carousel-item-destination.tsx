@@ -1,7 +1,8 @@
 // CarouselItemDetailed.jsx
 import React from 'react';
 
-type CarouselItemCategoriesProps = {
+type CarouselItemDestinationProps = {
+  id?: number
   imageTitle?: string;
   rating?: string;
   stay?: {
@@ -26,45 +27,53 @@ type CarouselItemCategoriesProps = {
   };
 };
 
-const CarouselItemCategories: React.FC<CarouselItemCategoriesProps> = ({ imageTitle, rating, stay, desc, price, styles }) => {
+const CarouselItemDestination: React.FC<CarouselItemDestinationProps> = ({id, imageTitle, rating, stay, desc, price, styles }) => {
   const OriginalPrice = price ? price + price * 0.10 : 0;
 
   return (
-    <li className={styles.li}>
+    <li key={id} className={styles.li}>
       <picture>
         <div style={styles.image.bgStyle} className={styles.image.classes}></div>
       </picture>
+
       <ul>
         <li>
-          <div className="titles">
+          <div className={`titles ${styles.imageTitle}`}>
             <h2>{imageTitle}</h2>
             <p> <span className="star">star</span> {rating}</p>
           </div>
-          <p>{stay?.day} {stay?.night}</p>
+          <div className='flex gap-2'>
+            <p>{stay?.day} Days</p>
+            <p>{stay?.night} Nights</p>
+          </div>
         </li>
+       
         <li>
-          <ul>
+          <ul className='flex justify-between gap-1'>
             <li>
               <img src="" alt="" />
-              <p>Flight</p>
+              <p className='text-sm'>Flight</p>
             </li>
             <li>
               <img src="" alt="" />
-              <p>Hotel</p>
+              <p className='text-sm'>Hotel</p>
             </li>
             <li>
               <img src="" alt="" />
-              <p>Transport</p>
+              <p className='text-sm'>Transport</p>
             </li>
             <li>
               <img src="" alt="" />
-              <p>Activities</p>
+              <p className='text-sm'>Activities</p>
             </li>
           </ul>
         </li>
+        
+        
         <li>{desc?.text1}</li>
         <li>{desc?.text2}</li>
         <li>{desc?.text3}</li>
+        
         <li>
           <div className="price">
             <p className="old-price">$ {OriginalPrice}</p>
@@ -72,8 +81,9 @@ const CarouselItemCategories: React.FC<CarouselItemCategoriesProps> = ({ imageTi
           </div>
         </li>
       </ul>
+    
     </li>
   );
 };
 
-export {CarouselItemCategories};
+export {CarouselItemDestination};
